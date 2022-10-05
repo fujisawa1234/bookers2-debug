@@ -1,0 +1,13 @@
+<% if params[:search].present? %>
+  <% if params[:model] == "user" %>
+    <% @users.each do |f| %>
+      <%= f.name %>
+    <% end %>
+  <% elsif params[:model] == "book" %>
+    <% @books.each do |f| %>
+      <%= f.title %>
+    <% end %>
+  <% end %>
+<% else %>
+検索結果は存在しません
+<% end %>
